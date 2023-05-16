@@ -39,6 +39,7 @@ namespace TD4
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblJ2Point = new System.Windows.Forms.Label();
             this.lblJ2Role = new System.Windows.Forms.Label();
+            this.btnnxt = new System.Windows.Forms.Button();
             this.grpJoueurs.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -145,11 +146,23 @@ namespace TD4
             this.lblJ2Role.TabIndex = 3;
             this.lblJ2Role.Text = "Rôle";
             // 
+            // btnnxt
+            // 
+            this.btnnxt.BackColor = System.Drawing.Color.LightGray;
+            this.btnnxt.Location = new System.Drawing.Point(691, 410);
+            this.btnnxt.Name = "btnnxt";
+            this.btnnxt.Size = new System.Drawing.Size(88, 28);
+            this.btnnxt.TabIndex = 7;
+            this.btnnxt.Text = "Suivant";
+            this.btnnxt.UseVisualStyleBackColor = false;
+            this.btnnxt.Click += new System.EventHandler(this.btnnxt_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnnxt);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpJoueurs);
@@ -179,5 +192,6 @@ namespace TD4
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblJ2Point;
         private System.Windows.Forms.Label lblJ2Role;
+        private System.Windows.Forms.Button btnnxt;
     }
 }

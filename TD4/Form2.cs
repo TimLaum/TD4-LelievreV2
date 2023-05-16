@@ -40,5 +40,13 @@ namespace TD4
             lblJ2Role.Text = frmParam.PartieEnCours.roleJ2;
             lblJ2Point.Text = $"{frmParam.PartieEnCours.pointsJ2} points";
         }
+
+        private void btnnxt_Click(object sender, EventArgs e)
+        {
+            Form3 frm3;
+            frm3 = new Form3();
+            frm3.Show(this);
+            this.Hide();
+        }
     }
 }
