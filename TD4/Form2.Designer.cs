@@ -197,7 +197,7 @@ namespace TD4
             this.pnlPic.Controls.Add(this.picblue);
             this.pnlPic.Location = new System.Drawing.Point(468, 12);
             this.pnlPic.Name = "pnlPic";
-            this.pnlPic.Size = new System.Drawing.Size(320, 155);
+            this.pnlPic.Size = new System.Drawing.Size(320, 113);
             this.pnlPic.TabIndex = 8;
             // 
             // picvio
@@ -207,12 +207,13 @@ namespace TD4
             this.picvio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picvio.Image = ((System.Drawing.Image)(resources.GetObject("picvio.Image")));
             this.picvio.InitialImage = ((System.Drawing.Image)(resources.GetObject("picvio.InitialImage")));
-            this.picvio.Location = new System.Drawing.Point(241, 32);
+            this.picvio.Location = new System.Drawing.Point(250, 9);
             this.picvio.Name = "picvio";
-            this.picvio.Size = new System.Drawing.Size(39, 27);
+            this.picvio.Size = new System.Drawing.Size(39, 35);
             this.picvio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picvio.TabIndex = 4;
             this.picvio.TabStop = false;
+            this.picvio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pics_MouseDown);
             // 
             // picora
             // 
@@ -221,34 +222,39 @@ namespace TD4
             this.picora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picora.Image = ((System.Drawing.Image)(resources.GetObject("picora.Image")));
             this.picora.InitialImage = null;
-            this.picora.Location = new System.Drawing.Point(198, 31);
+            this.picora.Location = new System.Drawing.Point(207, 9);
             this.picora.Name = "picora";
-            this.picora.Size = new System.Drawing.Size(37, 27);
+            this.picora.Size = new System.Drawing.Size(37, 35);
             this.picora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picora.TabIndex = 5;
             this.picora.TabStop = false;
+            this.picora.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pics_MouseDown);
             // 
             // picdrop4
             // 
             this.picdrop4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picdrop4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picdrop4.Location = new System.Drawing.Point(260, 79);
+            this.picdrop4.Location = new System.Drawing.Point(237, 58);
             this.picdrop4.Name = "picdrop4";
             this.picdrop4.Size = new System.Drawing.Size(43, 38);
             this.picdrop4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picdrop4.TabIndex = 3;
             this.picdrop4.TabStop = false;
+            this.picdrop4.DragDrop += new System.Windows.Forms.DragEventHandler(this.picdrops_DragDrop);
+            this.picdrop4.DragEnter += new System.Windows.Forms.DragEventHandler(this.picdrops_DragEnter);
             // 
             // picdrop3
             // 
             this.picdrop3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picdrop3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picdrop3.Location = new System.Drawing.Point(177, 79);
+            this.picdrop3.Location = new System.Drawing.Point(170, 58);
             this.picdrop3.Name = "picdrop3";
             this.picdrop3.Size = new System.Drawing.Size(43, 38);
             this.picdrop3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picdrop3.TabIndex = 2;
             this.picdrop3.TabStop = false;
+            this.picdrop3.DragDrop += new System.Windows.Forms.DragEventHandler(this.picdrops_DragDrop);
+            this.picdrop3.DragEnter += new System.Windows.Forms.DragEventHandler(this.picdrops_DragEnter);
             // 
             // picred
             // 
@@ -257,23 +263,26 @@ namespace TD4
             this.picred.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picred.Image = ((System.Drawing.Image)(resources.GetObject("picred.Image")));
             this.picred.InitialImage = ((System.Drawing.Image)(resources.GetObject("picred.InitialImage")));
-            this.picred.Location = new System.Drawing.Point(155, 31);
+            this.picred.Location = new System.Drawing.Point(164, 9);
             this.picred.Name = "picred";
-            this.picred.Size = new System.Drawing.Size(37, 26);
+            this.picred.Size = new System.Drawing.Size(37, 35);
             this.picred.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picred.TabIndex = 3;
             this.picred.TabStop = false;
+            this.picred.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pics_MouseDown);
             // 
             // picdrop2
             // 
             this.picdrop2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picdrop2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picdrop2.Location = new System.Drawing.Point(92, 79);
+            this.picdrop2.Location = new System.Drawing.Point(107, 58);
             this.picdrop2.Name = "picdrop2";
             this.picdrop2.Size = new System.Drawing.Size(43, 38);
             this.picdrop2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picdrop2.TabIndex = 1;
             this.picdrop2.TabStop = false;
+            this.picdrop2.DragDrop += new System.Windows.Forms.DragEventHandler(this.picdrops_DragDrop);
+            this.picdrop2.DragEnter += new System.Windows.Forms.DragEventHandler(this.picdrops_DragEnter);
             // 
             // picvert
             // 
@@ -282,24 +291,27 @@ namespace TD4
             this.picvert.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picvert.Image = ((System.Drawing.Image)(resources.GetObject("picvert.Image")));
             this.picvert.InitialImage = ((System.Drawing.Image)(resources.GetObject("picvert.InitialImage")));
-            this.picvert.Location = new System.Drawing.Point(117, 32);
+            this.picvert.Location = new System.Drawing.Point(121, 9);
             this.picvert.Name = "picvert";
-            this.picvert.Size = new System.Drawing.Size(28, 26);
+            this.picvert.Size = new System.Drawing.Size(37, 35);
             this.picvert.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picvert.TabIndex = 2;
             this.picvert.TabStop = false;
+            this.picvert.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pics_MouseDown);
             // 
             // picdrop1
             // 
             this.picdrop1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picdrop1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picdrop1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picdrop1.Location = new System.Drawing.Point(11, 79);
+            this.picdrop1.Location = new System.Drawing.Point(44, 58);
             this.picdrop1.Name = "picdrop1";
             this.picdrop1.Size = new System.Drawing.Size(43, 38);
             this.picdrop1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picdrop1.TabIndex = 0;
             this.picdrop1.TabStop = false;
+            this.picdrop1.DragDrop += new System.Windows.Forms.DragEventHandler(this.picdrops_DragDrop);
+            this.picdrop1.DragEnter += new System.Windows.Forms.DragEventHandler(this.picdrops_DragEnter);
             // 
             // picyel
             // 
@@ -308,12 +320,13 @@ namespace TD4
             this.picyel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picyel.Image = ((System.Drawing.Image)(resources.GetObject("picyel.Image")));
             this.picyel.InitialImage = ((System.Drawing.Image)(resources.GetObject("picyel.InitialImage")));
-            this.picyel.Location = new System.Drawing.Point(76, 31);
+            this.picyel.Location = new System.Drawing.Point(80, 9);
             this.picyel.Name = "picyel";
-            this.picyel.Size = new System.Drawing.Size(35, 27);
+            this.picyel.Size = new System.Drawing.Size(35, 36);
             this.picyel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picyel.TabIndex = 1;
             this.picyel.TabStop = false;
+            this.picyel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pics_MouseDown);
             // 
             // picblue
             // 
@@ -322,12 +335,13 @@ namespace TD4
             this.picblue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picblue.Image = ((System.Drawing.Image)(resources.GetObject("picblue.Image")));
             this.picblue.InitialImage = ((System.Drawing.Image)(resources.GetObject("picblue.InitialImage")));
-            this.picblue.Location = new System.Drawing.Point(29, 32);
+            this.picblue.Location = new System.Drawing.Point(38, 9);
             this.picblue.Name = "picblue";
-            this.picblue.Size = new System.Drawing.Size(36, 26);
+            this.picblue.Size = new System.Drawing.Size(36, 36);
             this.picblue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picblue.TabIndex = 0;
             this.picblue.TabStop = false;
+            this.picblue.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pics_MouseDown);
             // 
             // Form2
             // 
@@ -343,6 +357,7 @@ namespace TD4
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bonjour";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.grpJoueurs.ResumeLayout(false);
             this.grpJoueurs.PerformLayout();

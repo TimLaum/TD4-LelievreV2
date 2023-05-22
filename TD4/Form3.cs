@@ -62,5 +62,11 @@ namespace TD4
             PictureBox img = (PictureBox)sender;
             img.Image = (Image)e.Data.GetData(DataFormats.Bitmap);
         }
+
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(1);
+            
+        }
     }
 }

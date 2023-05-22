@@ -12,9 +12,9 @@ namespace TD4
 {
     public partial class Form1 : Form
     {
-        
-        internal Partie PartieEnCours ; // ?PartieEnCours nullable -> pour VS2022
-        
+
+        internal Partie PartieEnCours; // ?PartieEnCours nullable -> pour VS2022
+      
 
         public Form1()
         {
@@ -46,7 +46,7 @@ namespace TD4
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            
+
             if (nudNbManches.Value % 2 == 0)
             {
             }
@@ -61,13 +61,14 @@ namespace TD4
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 frm2;
-            PartieEnCours = new Partie(lblJoueur1.Text, lblJoueur2.Text, rdoClassique.Checked , Convert.ToByte(nudNbManches.Value), rdoCodif1.Checked) ;
+            PartieEnCours = new Partie(lblJoueur1.Text, lblJoueur2.Text, rdoClassique.Checked, Convert.ToByte(nudNbManches.Value), rdoCodif1.Checked);
 
 
             frm2 = new Form2();
             frm2.Show(this);
             this.Hide();
-            
+
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -123,6 +124,16 @@ namespace TD4
 
                 nudNbManches.Text = nudNbManches.Value.ToString();
             }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {            
+            Environment.Exit(0);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }
